@@ -15,6 +15,19 @@ module.exports = {
         'input-border': '#565666',
         'input': '#2A2A35'
       },
+      spacing: {
+        spt: '140px',
+        spr: '46px',
+        spl: '46px',
+
+      },
+      height: {
+        sh: '443px',
+        mhh: ''
+      },
+      width: {
+        sw: '797.625px'
+      },
       fontFamily: {
         'poppins': ["'Poppins'", 'sans-serif']
       }
