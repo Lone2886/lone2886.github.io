@@ -239,15 +239,6 @@ img {
     transition: filter 500ms;
 }
 
-.accordion-video {
-    object-fit: cover;
-    width: auto;
-    height: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
 .accordion-trigger {
     display: flex;
     align-items: center;
