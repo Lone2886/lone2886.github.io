@@ -1,14 +1,22 @@
-function updateList() {
-	const titles = [...document.querySelectorAll('h1, h2')].sort((a, b) => {
-		return Math.abs(a.getBoundingClientRect().top) - Math.abs(b.getBoundingClientRect().top);
+const accordion = document.querySelector('.accordion');
+accordion.addEventListener('click', (e) => {
+	const activePanel = e.target.closest(".accordion-panel");
+	if (!activePanel) return;
+	toggleAccordion(activePanel);
+});
+
+function toggleAccordion(panelToActivate) {
+	const buttons = panelToActivate.parentElement.querySelectorAll("button");
+	const contents = panelToActivate.parentElement.querySelectorAll('.accordion-content');
+	
+	buttons.forEach((button) => {
+		button.setAttribute('aria-expanded', false);
 	});
 
-	document.querySelectorAll(".selected-circle").forEach(c => c.classList.remove("selected-circle"));
-	
-	document.querySelectorAll(".nav-dot")[[...document.querySelectorAll('h1, h2')].indexOf(titles[0])].classList.add("selected-circle");
-}
+	contents.forEach((content) => {
+		content.setAttribute('aria-hidden', true);
+	});
 
-updateList();
-window.addEventListener('scroll', () => {
-    updateList();
-})
+	panelToActivate.querySelector('button').setAttribute('aria-expanded', true);
+	panelToActivate.querySelector('.accordion-content').setAttribute('aria-hidden', false);
+};
