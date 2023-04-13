@@ -179,6 +179,7 @@ img {
 
     display: grid;
     align-items: center;
+    color: black;
 }
 
 @media (max-width: 44.999em) {
