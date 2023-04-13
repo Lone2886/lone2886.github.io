@@ -142,9 +142,15 @@ img {
         flex-direction: row;
         height: 30rem;
     }
+    .accordion-panel:has([aria-expanded="true"]) {
+
+    }
     .accordion-panel:has([aria-expanded="false"]) {
         flex-basis: clamp(15rem, 40vh, 20rem);
         flex-grow: 1;
+    }
+    .accordion-panel:has([aria-expanded="false"]) .accordion-title {
+        opacity: 0;
     }
 }
 
@@ -196,8 +202,17 @@ img {
     }
     .accordion-panel:has([aria-expanded="true"]) {
         flex-basis: clamp(15rem, 40vh, 20rem);
+        height:0rem;
         flex-grow: 1;
     }
+    .accordion-panel:has([aria-expanded="false"]) {
+        height: 3rem
+
+    }
+    .accordion-panel:has([aria-expanded="false"]) .accordion-title {
+        opacity: 0;
+    }
+    
 }
 
 
