@@ -2,7 +2,7 @@ body {
     background-color: black;
 }
 
-.Main-Heading-Section {
+/* .Main-Heading-Section {
     height: 443px;
     width: 797.625px;
     padding: 140px 46px 0 46px;
@@ -114,6 +114,7 @@ section::after {
 
     display: flex;
 }
+*/
 
 .wrapper{
     max-width: 50rem;
