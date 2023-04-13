@@ -141,6 +141,10 @@ img {
         flex-direction: row;
         height: 30rem;
     }
+    .accordion-panel:has([aria-expanded="false"]) {
+        flex-basis: clamp(15rem, 40vh, 20rem);
+        flex-grow: 1;
+    }
 }
 
 .accordion-panel {
@@ -188,14 +192,15 @@ img {
         border-radius: 100vw;
 
     }
+    .accordion-panel:has([aria-expanded="true"]) {
+        flex-basis: clamp(15rem, 40vh, 20rem);
+        flex-grow: 1;
+    }
 }
 
-.accordion-panel:has([aria-expanded="false"]) {
-    flex-basis: clamp(15rem, 40vh, 20rem);
-    flex-grow: 1;
-}
 
 .accordion-panel:has([aria-expanded="true"]) .accordion-content > p {
+
     transform: translateY(0);
     opacity: 1;
     transition: transform 500ms 250ms, opacity 500ms 250ms;
